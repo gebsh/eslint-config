@@ -1,0 +1,1 @@
+# @gebsh/eslint-config
