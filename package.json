@@ -27,6 +27,9 @@
     "type": "git",
     "url": "https://github.com/gebsh/eslint-config.git"
   },
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.10"
+  },
   "devDependencies": {
     "@gebsh/prettier-config": "^1.0.0",
     "@types/eslint": "^7.2.13"

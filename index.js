@@ -6,6 +6,7 @@ const config = {
     './src/base/possible-errors.js',
     './src/base/best-practices.js',
     './src/base/strict-mode.js',
+    './src/base/variables.js',
   ],
 };
 
