@@ -8,6 +8,7 @@ const config = {
     './src/base/strict-mode.js',
     './src/base/variables.js',
     './src/base/stylistic-issues.js',
+    './src/base/ecmascript-6.js',
   ],
 };
 
