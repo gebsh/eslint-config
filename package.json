@@ -28,7 +28,8 @@
     "url": "https://github.com/gebsh/eslint-config.git"
   },
   "devDependencies": {
-    "@gebsh/prettier-config": "^1.0.0"
+    "@gebsh/prettier-config": "^1.0.0",
+    "@types/eslint": "^7.2.13"
   },
   "peerDependencies": {
     "eslint": "^7.30.0"
