@@ -7,6 +7,7 @@ const config = {
     './src/base/best-practices.js',
     './src/base/strict-mode.js',
     './src/base/variables.js',
+    './src/base/stylistic-issues.js',
   ],
 };
 
