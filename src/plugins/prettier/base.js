@@ -1,0 +1,75 @@
+'use strict';
+
+module.exports = {
+  rules: {
+    // Possible Errors
+    'no-extra-parens': 'off',
+    'no-extra-semi': 'off',
+    'no-unexpected-multiline': 'off',
+
+    // Best Practices
+    'dot-location': 'off',
+    'no-floating-decimal': 'off',
+    'no-multi-spaces': 'off',
+    'wrap-iife': 'off',
+
+    // Stylistic Issues
+    'array-bracket-newline': 'off',
+    'array-bracket-spacing': 'off',
+    'array-element-newline': 'off',
+    'block-spacing': 'off',
+    'brace-style': 'off',
+    'comma-dangle': 'off',
+    'comma-spacing': 'off',
+    'comma-style': 'off',
+    'computed-property-spacing': 'off',
+    'eol-last': 'off',
+    'func-call-spacing': 'off',
+    'function-call-argument-newline': 'off',
+    'function-paren-newline': 'off',
+    'implicit-arrow-linebreak': 'off',
+    indent: 'off',
+    'jsx-quotes': 'off',
+    'key-spacing': 'off',
+    'keyword-spacing': 'off',
+    'linebreak-style': 'off',
+    'multiline-ternary': 'off',
+    'new-parens': 'off',
+    'newline-per-chained-call': 'off',
+    'no-mixed-operators': 'off',
+    'no-mixed-spaces-and-tabs': 'off',
+    'no-multiple-empty-lines': 'off',
+    'no-trailing-spaces': 'off',
+    'no-whitespace-before-property': 'off',
+    'object-curly-newline': 'off',
+    'object-curly-spacing': 'off',
+    'object-property-newline': 'off',
+    'one-var-declaration-per-line': 'off',
+    'operator-linebreak': 'off',
+    'padded-blocks': 'off',
+    'quote-props': 'off',
+    semi: 'off',
+    'semi-spacing': 'off',
+    'semi-style': 'off',
+    'space-before-blocks': 'off',
+    'space-before-function-paren': 'off',
+    'space-in-parens': 'off',
+    'space-infix-ops': 'off',
+    'space-unary-ops': 'off',
+    'switch-colon-spacing': 'off',
+    'template-tag-spacing': 'off',
+    // https://github.com/prettier/prettier/issues/6461
+    // 'unicode-bom': 'off'
+
+    // ECMAScript 6
+    'arrow-body-style': 'off',
+    'arrow-parens': 'off',
+    'arrow-spacing': 'off',
+    'generator-star-spacing': 'off',
+    'no-confusing-arrow': 'off',
+    'prefer-arrow-callback': 'off',
+    'rest-spread-spacing': 'off',
+    'template-curly-spacing': 'off',
+    'yield-star-spacing': 'off',
+  },
+};
