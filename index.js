@@ -1,7 +1,6 @@
 'use strict';
 
-/** @type {import('eslint').Linter.Config} */
-const config = {
+module.exports = {
   extends: [
     './src/base/possible-errors.js',
     './src/base/best-practices.js',
@@ -11,5 +10,3 @@ const config = {
     './src/base/ecmascript-6.js',
   ],
 };
-
-module.exports = config;
