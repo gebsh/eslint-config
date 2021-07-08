@@ -12,5 +12,6 @@ module.exports = {
     './src/plugins/eslint-comments/best-practices.js',
     './src/plugins/eslint-comments/stylistic-issues.js',
     './src/plugins/import/static-analysis.js',
+    './src/plugins/import/helpful-warnings.js',
   ],
 };
