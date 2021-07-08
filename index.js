@@ -13,5 +13,6 @@ module.exports = {
     './src/plugins/eslint-comments/stylistic-issues.js',
     './src/plugins/import/static-analysis.js',
     './src/plugins/import/helpful-warnings.js',
+    './src/plugins/import/module-systems.js',
   ],
 };
