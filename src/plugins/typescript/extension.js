@@ -37,7 +37,7 @@ module.exports = {
     // OFF: The base rule is disabled too.
     '@typescript-eslint/init-declarations': 'off',
     'keyword-spacing': 'off',
-    '@typescript-eslint': [
+    '@typescript-eslint/keyword-spacing': [
       'warn',
       {
         before: true,
