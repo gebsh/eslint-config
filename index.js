@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  plugins: ['eslint-comments'],
+  plugins: ['eslint-comments', 'import'],
   extends: [
     './src/base/possible-errors.js',
     './src/base/best-practices.js',
@@ -11,5 +11,6 @@ module.exports = {
     './src/base/ecmascript-6.js',
     './src/plugins/eslint-comments/best-practices.js',
     './src/plugins/eslint-comments/stylistic-issues.js',
+    './src/plugins/import/static-analysis.js',
   ],
 };
