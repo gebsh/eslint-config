@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  ruels: {
+  rules: {
     'array-bracket-newline': ['warn', { multiline: true, minItems: null }],
     'array-bracket-spacing': [
       'warn',
