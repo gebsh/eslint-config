@@ -5,7 +5,8 @@ module.exports = {
     'import/export': 'error',
     'import/no-named-as-default': 'error',
     'import/no-named-as-default-member': 'error',
-    // TODO: off
+    // OFF: Deprecated imports are sometimes necessary. If this rule is needed,
+    // then it should be configured per-project basis.
     'import/no-deprecated': 'off',
     'import/no-extraneous-dependencies': [
       'error',
