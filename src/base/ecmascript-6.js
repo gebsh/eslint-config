@@ -23,7 +23,7 @@ module.exports = {
     'no-confusing-arrow': ['warn', { allowParens: true }],
     'no-const-assign': 'error',
     'no-dupe-class-members': 'error',
-    'no-duplicate-imports': ['warn', { includeExports: false }],
+    'no-duplicate-imports': ['error', { includeExports: false }],
     'no-new-symbol': 'error',
     'no-restricted-exports': [
       'warn',

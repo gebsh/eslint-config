@@ -57,7 +57,7 @@ module.exports = {
     '@typescript-eslint/no-dupe-class-members': 'error',
     'no-duplicate-imports': 'off',
     '@typescript-eslint/no-duplicate-imports': [
-      'warn',
+      'error',
       { includeExports: false },
     ],
     'no-empty-function': 'off',
