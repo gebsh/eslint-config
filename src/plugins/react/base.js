@@ -134,8 +134,8 @@ module.exports = {
         },
       },
     ],
-    // OFF: There's no need to sort these alphabetically, especially when it
-    // is not autofixable.
+    // OFF: There's no need to sort these, especially when it is not
+    // autofixable.
     'react/sort-prop-types': 'off',
     'react/state-in-constructor': ['warn', 'never'],
     'react/static-property-placement': ['error', 'static public field'],
