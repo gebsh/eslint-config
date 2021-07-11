@@ -10,5 +10,5 @@ module.exports = {
   settings: {
     version: 'detect',
   },
-  extends: ['./src/plugins/react/base.js'],
+  extends: ['./src/plugins/react/base.js', './src/plugins/react/jsx.js'],
 };
