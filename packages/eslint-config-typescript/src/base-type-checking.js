@@ -105,7 +105,7 @@ module.exports = {
       'warn',
       { typesToIgnore: [] },
     ],
-    '@typescritp-eslint/no-unsafe-argument': 'error',
+    '@typescript-eslint/no-unsafe-argument': 'error',
     '@typescript-eslint/no-unsafe-assignment': 'error',
     '@typescript-eslint/no-unsafe-call': 'error',
     '@typescript-eslint/no-unsafe-member-access': 'error',
