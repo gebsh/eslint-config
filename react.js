@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  plugins: ['react'],
+  plugins: ['react', 'react-hooks'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -10,5 +10,9 @@ module.exports = {
   settings: {
     version: 'detect',
   },
-  extends: ['./src/plugins/react/base.js', './src/plugins/react/jsx.js'],
+  extends: [
+    './src/plugins/react/base.js',
+    './src/plugins/react/jsx.js',
+    './src/plugins/react-hooks/base.js',
+  ],
 };
