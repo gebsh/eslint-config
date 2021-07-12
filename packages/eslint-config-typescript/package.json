@@ -1,0 +1,39 @@
+{
+  "name": "@gebsh/eslint-config-typescript",
+  "version": "0.1.0",
+  "description": "gebsh's shareable ESLint configuration with TypeScript support",
+  "author": "Szymon Gebler <gebler.szymon@gmail.com>",
+  "license": "ISC",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config",
+    "config",
+    "configuration"
+  ],
+  "main": "./index.js",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "index.js",
+    "with-type-checking.js",
+    "src"
+  ],
+  "homepage": "https://github.com/gebsh/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/gebsh/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gebsh/eslint-config.git",
+    "directory": "packages/eslint-config-typescript"
+  },
+  "dependencies": {
+    "@gebsh/eslint-config": "^0.1.0",
+    "@typescript-eslint/parser": "^4.28.2"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.2"
+  }
+}

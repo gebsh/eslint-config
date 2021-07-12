@@ -1,5 +1,7 @@
 'use strict';
 
+const extensions = ['.js', '.jsx', '.mjs', '.cjs'];
+
 module.exports = {
   plugins: ['eslint-comments', 'import'],
   extends: [
@@ -16,4 +18,16 @@ module.exports = {
     './src/plugins/import/module-systems.js',
     './src/plugins/import/style-guide.js',
   ],
+  settings: {
+    'import/extensions': extensions,
+    'import/ignore': [
+      'node_modules/',
+      '\\.(?:css|scss|sass|less|jpg|jpeg|gif|png|svg|json)$',
+    ],
+    'import/resolver': {
+      node: {
+        extensions,
+      },
+    },
+  },
 };

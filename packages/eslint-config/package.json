@@ -1,8 +1,7 @@
 {
-  "name": "@gebsh/eslint-config-monorepo",
+  "name": "@gebsh/eslint-config",
   "version": "0.1.0",
-  "private": true,
-  "description": "Monorepo for all gebsh's shareable ESLint configurations",
+  "description": "gebsh's shareable ESLint configuration",
   "author": "Szymon Gebler <gebler.szymon@gmail.com>",
   "license": "ISC",
   "keywords": [
@@ -12,8 +11,14 @@
     "config",
     "configuration"
   ],
-  "workspaces": [
-    "./packages/*"
+  "main": "./index.js",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "index.js",
+    "prettier.js",
+    "src"
   ],
   "homepage": "https://github.com/gebsh/eslint-config#readme",
   "bugs": {
@@ -21,15 +26,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gebsh/eslint-config.git"
+    "url": "https://github.com/gebsh/eslint-config.git",
+    "directory": "packages/eslint-config"
   },
-  "devDependencies": {
-    "@gebsh/prettier-config": "^1.0.0",
-    "@gebsh/eslint-config": "^0.1.0",
-    "@types/eslint": "^7.2.13",
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.10"
+  },
+  "peerDependencies": {
     "eslint": "^7.30.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.23.4",
-    "prettier": "2.3.2"
+    "eslint-plugin-import": "^2.23.4"
   }
 }

@@ -2,6 +2,11 @@
 
 module.exports = {
   plugins: ['react', 'react-hooks'],
+  extends: [
+    './src/react/base.js',
+    './src/react/jsx.js',
+    './src/react-hooks/base.js',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -10,9 +15,4 @@ module.exports = {
   settings: {
     version: 'detect',
   },
-  extends: [
-    './src/plugins/react/base.js',
-    './src/plugins/react/jsx.js',
-    './src/plugins/react-hooks/base.js',
-  ],
 };
