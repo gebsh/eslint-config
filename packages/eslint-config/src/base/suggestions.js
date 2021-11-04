@@ -34,7 +34,10 @@ module.exports = {
     // OFF: When this rule is enabled and code is temporary commented-out, it
     // changes letter case causing syntax errors where the code is uncommented.
     'capitalized-comments': 'off',
-    'class-methods-use-this': ['warn', { exceptMethods: [] }],
+    'class-methods-use-this': [
+      'warn',
+      { exceptMethods: [], enforceForClassFields: true },
+    ],
     complexity: ['warn', 12],
     'consistent-return': ['error', { treatUndefinedAsUnspecified: false }],
     'consistent-this': ['warn', 'self'],
@@ -72,7 +75,7 @@ module.exports = {
     // OFF: This rule is annoying when a variable is initialized conditionally
     // using `if {} else {}`.
     'init-declarations': 'off',
-    'max-classes-per-file': ['warn', 3],
+    'max-classes-per-file': ['warn', { max: 3, ignoreExpressions: true }],
     'max-depth': ['warn', 3],
     // OFF: This rule is too invasive. In most cases it's better to manually
     // manage files and split them when there's a feeling that they may be too
