@@ -1,5 +1,8 @@
 'use strict';
 
+const options = require('../../options.js');
+
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   rules: {
     'import/first': 'warn',
@@ -8,12 +11,16 @@ module.exports = {
     // harms readability.
     'import/exports-last': 'off',
     'no-duplicate-imports': 'off',
-    '@typescript-eslint/no-duplicate-imports': 'off',
     'import/no-duplicates': ['error', { considerQueryString: true }],
     // OFF: Treating modules as a namespace can be useful if there is many
     // named exports from a file.
     'import/no-namespace': 'off',
     'import/extensions': ['warn', 'ignorePackages'],
+    'padding-line-between-statements': [
+      'warn',
+      ...options.linePaddings.general,
+    ],
+    'sort-imports': 'off',
     'import/order': [
       'warn',
       {
@@ -28,19 +35,17 @@ module.exports = {
           'type',
           'unknown',
         ],
-        // Newlines are already enforced by the base ESLint
-        // `padding-line-between-statements` rule.
-        'newlines-between': 'ignore',
+        'newlines-between': 'never',
         alphabetize: { order: 'asc', caseInsensitive: false },
         warnOnUnassignedImports: true,
       },
     ],
-    // Newlines are already enforced by the base ESLint
-    // `padding-line-between-statements` rule.
-    'import/newline-after-import': 'off',
+    'import/newline-after-import': ['warn', { count: 1 }],
     // OFF: Default exports should not be peferred.
     'import/prefer-default-export': 'off',
-    // TODO: Should this be enabled?
+    // OFF: This rule is too granular to be enabled in a shareable
+    // configuration. If this rule is needed, then it should be configured
+    // separately in a project configuration.
     'import/max-dependencies': 'off',
     // OFF: Importing modules for side effects is sometimes necessary.
     'import/no-unassigned-import': 'off',
@@ -63,8 +68,9 @@ module.exports = {
     // OFF: Grouping exports is unnecessary and, since this rule cannot be
     // automatically fixed, is cumbersome to do by hand.
     'import/group-exports': 'off',
-    // OFF: This should be configured per-project basis, not in a shareable
-    // configuration.
+    // OFF: This rule is too granular to be enabled in a shareable
+    // configuration. If this rule is needed, then it should be configured
+    // separately in a project configuration.
     'import/dynamic-import-chunkname': 'off',
   },
 };

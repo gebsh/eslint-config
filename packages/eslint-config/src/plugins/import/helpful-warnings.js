@@ -1,12 +1,13 @@
 'use strict';
 
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   rules: {
     'import/export': 'error',
     'import/no-named-as-default': 'error',
     'import/no-named-as-default-member': 'error',
     // OFF: Deprecated imports are sometimes necessary. If this rule is needed,
-    // then it should be configured per-project basis.
+    // then it should be configured separately in a project configuration.
     'import/no-deprecated': 'off',
     'import/no-extraneous-dependencies': [
       'error',

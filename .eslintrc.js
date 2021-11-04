@@ -1,6 +1,7 @@
 'use strict';
 
-module.exports = /** @type {import('eslint').Linter.Config} */ ({
+/** @type {import('eslint').Linter.Config} */
+module.exports = {
   root: true,
   env: {
     node: true,
@@ -10,4 +11,4 @@ module.exports = /** @type {import('eslint').Linter.Config} */ ({
     ecmaVersion: 2021,
   },
   extends: ['@gebsh/eslint-config', '@gebsh/eslint-config/prettier'],
-});
+};

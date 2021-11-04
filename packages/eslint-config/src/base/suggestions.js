@@ -92,7 +92,9 @@ module.exports = {
     ],
     'max-nested-callbacks': ['warn', 2],
     'max-params': ['warn', 4],
-    // OFF: This rule is too granular to be enabled in this configuration.
+    // OFF: This rule is too granular to be enabled in a shareable
+    // configuration. If this rule is needed, then it should be configured
+    // separately in a project configuration.
     'max-statements': 'off',
     'multiline-comment-style': ['warn', 'separate-lines'],
     'new-cap': [
@@ -511,8 +513,16 @@ module.exports = {
     'require-await': 'off',
     'require-unicode-regexp': 'warn',
     'require-yield': 'error',
-    // OFF: The `eslint-plugin-import` is responsible for this.
-    'sort-imports': 'off',
+    'sort-imports': [
+      'warn',
+      {
+        ignoreCase: false,
+        ignoreDeclarationSort: false,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['all', 'multiple', 'single', 'none'],
+        allowSeparatedGroups: false,
+      },
+    ],
     // OFF: This rule is not autofixable. It would be too much of a burden to
     // maintain a proper order by hand.
     'sort-keys': 'off',

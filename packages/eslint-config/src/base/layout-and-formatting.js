@@ -1,5 +1,7 @@
 'use strict';
 
+const options = require('../options.js');
+
 /**
  * @type {import('eslint').Linter.Config}
  */
@@ -189,73 +191,8 @@ module.exports = {
     'padded-blocks': ['warn', 'never'],
     'padding-line-between-statements': [
       'warn',
-      { blankLine: 'always', prev: ['var', 'let', 'const'], next: '*' },
-      {
-        blankLine: 'any',
-        prev: ['var', 'let', 'const'],
-        next: ['var', 'let', 'const'],
-      },
-      {
-        blankLine: 'always',
-        prev: [
-          'class',
-          'directive',
-          'function',
-          'import',
-          // Exports are not included here because they may appear in
-          // declarations like this:
-          //
-          // ```js
-          // export const foo = 23;
-          // const bar = foo + 42;
-          // ```
-          //
-          // In such cases there shouldn't be a blank line between statements.
-          'cjs-import',
-          'cjs-export',
-        ],
-        next: '*',
-      },
-      {
-        blankLine: 'always',
-        prev: '*',
-        next: ['throw', 'return'],
-      },
-      {
-        blankLine: 'never',
-        prev: 'import',
-        next: 'import',
-      },
-      {
-        blankLine: 'any',
-        prev: 'export',
-        next: 'export',
-      },
-      {
-        blankLine: 'never',
-        prev: 'cjs-import',
-        next: 'cjs-import',
-      },
-      {
-        blankLine: 'always',
-        prev: 'directive',
-        next: 'cjs-import',
-      },
-      {
-        blankLine: 'any',
-        prev: 'cjs-export',
-        next: 'cjs-export',
-      },
-      {
-        blankLine: 'always',
-        prev: '*',
-        next: 'block-like',
-      },
-      {
-        blankLine: 'always',
-        prev: 'block-like',
-        next: '*',
-      },
+      ...options.linePaddings.general,
+      ...options.linePaddings.imports,
     ],
     quotes: [
       'warn',
