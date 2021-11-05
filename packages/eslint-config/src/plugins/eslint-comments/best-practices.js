@@ -1,5 +1,6 @@
 'use strict';
 
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   rules: {
     'eslint-comments/disable-enable-pair': ['error', { allowWholeFile: true }],

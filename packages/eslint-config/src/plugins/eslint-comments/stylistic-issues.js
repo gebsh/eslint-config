@@ -1,8 +1,11 @@
 'use strict';
 
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   rules: {
-    // OFF: It's too general rule to specify it in a shareable configuration.
+    // OFF: This rule is too granular to be enabled in a shareable
+    // configuration. If this rule is needed, then it should be configured
+    // separately in a project configuration.
     'eslint-comments/no-restricted-disable': 'off',
     'eslint-comments/no-use': [
       'error',
@@ -15,10 +18,11 @@ module.exports = {
         ],
       },
     ],
-    // OFF: Those descriptions are really nice and useful but their style is
-    // awful. Also, they must be placed (at least partially) on the same line as
-    // a comment and that may result in problems with satisfying the ESLint's
-    // `max-len` rule.
+    // OFF: Those descriptions are really nice and useful but their cannot span
+    // multiple lines when used with the `eslint-disable-next-line` comment. For
+    // that reason, this rule is disabled for now. It can be re-enabled when
+    // this limitation is addressed. For more information see:
+    // https://github.com/eslint/eslint/issues/14284.
     'eslint-comments/require-description': 'off',
   },
 };
