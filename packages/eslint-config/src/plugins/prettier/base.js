@@ -66,7 +66,7 @@ module.exports = {
     'switch-colon-spacing': 'off',
     'template-curly-spacing': 'off',
     'template-tag-spacing': 'off',
-    // OFF: This is disabled in the official `eslint-config-prettier`
+    // OFF: This is disabled in the official 'eslint-config-prettier'
     // conguration but in reality it shouldn't be disabled. For more information
     // see: https://github.com/prettier/prettier/issues/6461.
     // 'unicode-bom': 'off'

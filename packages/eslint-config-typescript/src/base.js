@@ -1,5 +1,6 @@
 'use strict';
 
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   rules: {
     '@typescript-eslint/adjacent-overload-signatures': 'warn',
@@ -112,6 +113,16 @@ module.exports = {
             'abstract-field',
             'decorated-field',
             'instance-field',
+            // TODO: Check whether this collide with the base
+            // `grouped-accessor-pairs` rule.
+            'static-get',
+            'static-set',
+            'abstract-get',
+            'abstract-set',
+            'decorated-get',
+            'decorated-set',
+            'instance-get',
+            'instance-set',
             'signature',
             'constructor',
             'static-method',
@@ -183,6 +194,7 @@ module.exports = {
         allowDefinitionFiles: true,
       },
     ],
+    '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     // OFF: Non-null assertions are commonly used with Set/Map to get an element
     // after checking whether the collection contains it with the `has` method.
@@ -207,6 +219,7 @@ module.exports = {
         allowLiterals: 'never',
         allowMappedTypes: 'always',
         allowTupleTypes: 'always',
+        allowGenerics: 'always',
       },
     ],
     '@typescript-eslint/no-unnecessary-type-constraint': 'warn',

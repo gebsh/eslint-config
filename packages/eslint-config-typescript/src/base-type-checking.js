@@ -1,8 +1,10 @@
 'use strict';
 
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   rules: {
     '@typescript-eslint/await-thenable': 'error',
+    '@typescript-eslint/consistent-type-exports': 'warn',
     '@typescript-eslint/naming-convention': [
       'warn',
       // Enforce camelCase by default.
@@ -78,6 +80,10 @@ module.exports = {
     // OFF: This config disallows for..in loops. This is enforced by the base
     // ESLint `no-restricted-syntax` rule.
     '@typescript-eslint/no-for-in-array': 'off',
+    '@typescript-eslint/no-meaningless-void-operator': [
+      'error',
+      { checkNever: true },
+    ],
     '@typescript-eslint/no-misused-promises': [
       'error',
       {
@@ -128,10 +134,12 @@ module.exports = {
       {
         checkParameterProperties: true,
         ignoreInferredTypes: false,
+        treatMethodsAsReadonly: true,
       },
     ],
     '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
     '@typescript-eslint/prefer-regexp-exec': 'warn',
+    '@typescript-eslint/prefer-return-this-type': 'warn',
     '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
     '@typescript-eslint/promise-function-async': [
       'error',
@@ -159,6 +167,7 @@ module.exports = {
         allowBoolean: true,
         allowAny: false,
         allowNullish: true,
+        allowRegExp: false,
       },
     ],
     '@typescript-eslint/strict-boolean-expressions': [

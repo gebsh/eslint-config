@@ -1,5 +1,8 @@
 'use strict';
 
+const options = require('../../eslint-config/src/options.js');
+
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   rules: {
     'brace-style': 'off',
@@ -34,7 +37,7 @@ module.exports = {
     indent: 'off',
     '@typescript-eslint/indent': ['warn', 2],
     'init-declarations': 'off',
-    // OFF: The base rule is disabled too.
+    // OFF: The is also disabled in the base ESLint configuration.
     '@typescript-eslint/init-declarations': 'off',
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': [
@@ -56,10 +59,9 @@ module.exports = {
     'no-dupe-class-members': 'off',
     '@typescript-eslint/no-dupe-class-members': 'error',
     'no-duplicate-imports': 'off',
-    '@typescript-eslint/no-duplicate-imports': [
-      'error',
-      { includeExports: false },
-    ],
+    // OFF: This is handled by the 'eslint-plugin-import' included in the base
+    // configuration.
+    '@typescript-eslint/no-duplicate-imports': 'off',
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': [
       'warn',
@@ -98,13 +100,16 @@ module.exports = {
     'no-loss-of-precision': 'off',
     '@typescript-eslint/no-loss-of-precision': 'warn',
     'no-magic-numbers': 'off',
-    // OFF: The base rule is disabled too.
+    // OFF: The is also disabled in the base ESLint configuration.
     '@typescript-eslint/no-magic-numbers': 'off',
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': [
       'error',
       { builtinGlobals: true, ignoreDeclarationMerge: true },
     ],
+    'no-restricted-imports': 'off',
+    // OFF: The is also disabled in the base ESLint configuration.
+    '@typescript-eslint/no-restricted-imports': 'off',
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': [
       'warn',
@@ -169,6 +174,40 @@ module.exports = {
     '@typescript-eslint/no-useless-constructor': 'error',
     'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': ['warn', 'always'],
+    // TODO: Enable when the bug with this rule is fixed. For more information
+    // see: https://github.com/typescript-eslint/typescript-eslint/issues/4091.
+    // 'padding-line-between-statements': 'off',
+    // '@typescript-eslint/padding-line-between-statements': [
+    //   'warn',
+    //   ...options.linePaddings.general,
+    //   // Require lines around interfaces.
+    //   {
+    //     blankLine: 'always',
+    //     prev: '*',
+    //     next: 'interface',
+    //   },
+    //   {
+    //     blankLine: 'always',
+    //     prev: 'interface',
+    //     next: '*',
+    //   },
+    //   // Groups type definitions together.
+    //   {
+    //     blankLine: 'always',
+    //     prev: '*',
+    //     next: 'type',
+    //   },
+    //   {
+    //     blankLine: 'always',
+    //     prev: 'type',
+    //     next: '*',
+    //   },
+    //   {
+    //     blankLine: 'never',
+    //     prev: 'type',
+    //     next: 'type',
+    //   },
+    // ],
     quotes: 'off',
     '@typescript-eslint/quotes': [
       'warn',
