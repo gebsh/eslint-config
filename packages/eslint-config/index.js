@@ -2,6 +2,7 @@
 
 const extensions = ['.js', '.jsx', '.mjs', '.cjs'];
 
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   plugins: ['eslint-comments', 'import'],
   extends: [
