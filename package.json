@@ -1,6 +1,6 @@
 {
   "name": "@gebsh/eslint-config-monorepo",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Monorepo for all gebsh's shareable ESLint configurations",
   "author": "Szymon Gebler <gebler.szymon@gmail.com>",

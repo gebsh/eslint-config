@@ -1,6 +1,6 @@
 {
   "name": "@gebsh/eslint-config-react",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "gebsh's shareable ESLint configuration with React support",
   "author": "Szymon Gebler <gebler.szymon@gmail.com>",
   "license": "ISC",

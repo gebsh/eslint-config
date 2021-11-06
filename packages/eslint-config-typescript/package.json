@@ -1,6 +1,6 @@
 {
   "name": "@gebsh/eslint-config-typescript",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "gebsh's shareable ESLint configuration with TypeScript support",
   "author": "Szymon Gebler <gebler.szymon@gmail.com>",
   "license": "ISC",
@@ -30,7 +30,7 @@
     "directory": "packages/eslint-config-typescript"
   },
   "dependencies": {
-    "@gebsh/eslint-config": "^0.1.0",
+    "@gebsh/eslint-config": "^0.0.1",
     "@typescript-eslint/parser": "^5.3.0"
   },
   "devDependencies": {
